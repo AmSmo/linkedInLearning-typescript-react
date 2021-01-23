@@ -1,8 +1,6 @@
 import React from 'react'
+import messageHoc from './hoc'
+const example = (props: any): any => <p>{props.name}, {props.message}</p>
 
-export default function Message(props: {message: string, name: string}): any{
- 
-    return(
-        <p>{props.name} says "{props.message}"</p>
-    )
-}
+const Message = messageHoc(example)
+export default Message
